@@ -61,33 +61,9 @@ class Game:
     
     #Assigns the number values to each card using the keywords of the cards pulled by the check_value function and returns a 2D array with the number vaues of each user's cards
     def assign_values(cards_numbers_words):
+      num_exchange = {"Two": 2, "Three": 3, "Four": 4, "Five": 5, "Six": 6, "Seven":7, "Eight": 8, "Nine": 9, "Ten": 10, "Jack": 11, "Queen": 12, "King":13, "Ace": 14}
       for x in range(len(cards_numbers_words)):
-        if(cards_numbers_words[x] == "Two"):
-          cards_numbers_words[x] = 2
-        if(cards_numbers_words[x] == "Three"):
-          cards_numbers_words[x] = 3
-        if(cards_numbers_words[x] == "Four"):
-          cards_numbers_words[x] = 4
-        if(cards_numbers_words[x] == "Five"):
-          cards_numbers_words[x] = 5
-        if(cards_numbers_words[x] == "Six"):
-          cards_numbers_words[x] = 6
-        if(cards_numbers_words[x] == "Seven"):
-          cards_numbers_words[x] = 7
-        if(cards_numbers_words[x] == "Eight"):
-          cards_numbers_words[x] = 8
-        if(cards_numbers_words[x] == "Nine"):
-          cards_numbers_words[x] = 9
-        if(cards_numbers_words[x] == "Ten"):
-          cards_numbers_words[x] = 10
-        if(cards_numbers_words[x] == "Jack"):
-          cards_numbers_words[x] = 11
-        if(cards_numbers_words[x] == "Queen"):
-          cards_numbers_words[x] = 12
-        if(cards_numbers_words[x] == "King"):
-          cards_numbers_words[x] = 13
-        if(cards_numbers_words[x] == "Ace"):
-          cards_numbers_words[x] = 14
+        cards_numbers_words[x] = num_exchange[cards_numbers_words[x]]
 
       user1_cards_numbers = cards_numbers_words[:26]
       user2_cards_numbers = cards_numbers_words[26:]
